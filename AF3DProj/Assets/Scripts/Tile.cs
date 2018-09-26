@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour {
 
-    private string tileName;
+    public string tileName;
     public List<Tile> NeighbourList;
     private int infastructureLevel;
     private City tileCity;
-
+    public Vector2 tileCenter;
+    
     public string TileName
     {
         get

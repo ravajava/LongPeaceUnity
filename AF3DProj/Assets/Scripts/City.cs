@@ -4,21 +4,8 @@ using UnityEngine;
 
 public class City : MonoBehaviour {
 
-    private string cityName;
+    public string cityName;
     public List<Building> CityBuildings;
-
-    public string CityName
-    {
-        get
-        {
-            return cityName;
-        }
-
-        set
-        {
-            cityName = value;
-        }
-    }
 
 
     // Use this for initialization
