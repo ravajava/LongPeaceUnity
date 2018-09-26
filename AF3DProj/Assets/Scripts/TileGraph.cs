@@ -12,12 +12,12 @@ public class TileGraph
 {
     private class TileNode
     {
-        public List<int> adjagentNodes;     // graph indices of adjacent nodes
+        public List<int> adjacentNodes;     // graph indices of adjacent nodes
         public int dataIndex;               // index for game data container
 
         TileNode()
         {
-            adjagentNodes = new List<int>();
+            adjacentNodes = new List<int>();
         }
     }
 
@@ -32,43 +32,43 @@ public class TileGraph
     //Adds an edge between two vertices
     void AddEdge(int nodeAIndex, int nodeBIndex)
     {
-        m_TileNodes[nodeAIndex].adjagentNodes.Add(nodeBIndex);
-        m_TileNodes[nodeBIndex].adjagentNodes.Add(nodeAIndex);
+        m_TileNodes[nodeAIndex].adjacentNodes.Add(nodeBIndex);
+        m_TileNodes[nodeBIndex].adjacentNodes.Add(nodeAIndex);
 
         // sort adjacent nodes so we can use binary search
-        if (m_TileNodes[nodeAIndex].adjagentNodes.Count > 0)
-            m_TileNodes[nodeAIndex].adjagentNodes.Sort();
+        if (m_TileNodes[nodeAIndex].adjacentNodes.Count > 0)
+            m_TileNodes[nodeAIndex].adjacentNodes.Sort();
 
-        if (m_TileNodes[nodeBIndex].adjagentNodes.Count > 0)
-            m_TileNodes[nodeBIndex].adjagentNodes.Sort();
+        if (m_TileNodes[nodeBIndex].adjacentNodes.Count > 0)
+            m_TileNodes[nodeBIndex].adjacentNodes.Sort();
     }
 
     // Removes an edge between two vertices
     void RemoveEdge(int nodeAIndex, int nodeBIndex)
     {
         // search if edge exists
-        int edgeIndexA =  m_TileNodes[nodeAIndex].adjagentNodes.BinarySearch(nodeBIndex);
-        int edgeIndexB = m_TileNodes[nodeBIndex].adjagentNodes.BinarySearch(nodeAIndex);
+        int edgeIndexA =  m_TileNodes[nodeAIndex].adjacentNodes.BinarySearch(nodeBIndex);
+        int edgeIndexB = m_TileNodes[nodeBIndex].adjacentNodes.BinarySearch(nodeAIndex);
 
         // if it does, remove edge and resort
         if (edgeIndexA >= 0 && edgeIndexB >= 0)
         {
-            m_TileNodes[nodeAIndex].adjagentNodes.RemoveAt(edgeIndexA);
-            m_TileNodes[nodeBIndex].adjagentNodes.RemoveAt(edgeIndexB);
+            m_TileNodes[nodeAIndex].adjacentNodes.RemoveAt(edgeIndexA);
+            m_TileNodes[nodeBIndex].adjacentNodes.RemoveAt(edgeIndexB);
 
             // sort adjacent nodes so we can use binary search
-            if (m_TileNodes[nodeAIndex].adjagentNodes.Count > 0)
-                m_TileNodes[nodeAIndex].adjagentNodes.Sort();
+            if (m_TileNodes[nodeAIndex].adjacentNodes.Count > 0)
+                m_TileNodes[nodeAIndex].adjacentNodes.Sort();
 
-            if (m_TileNodes[nodeBIndex].adjagentNodes.Count > 0)
-                m_TileNodes[nodeBIndex].adjagentNodes.Sort();
+            if (m_TileNodes[nodeBIndex].adjacentNodes.Count > 0)
+                m_TileNodes[nodeBIndex].adjacentNodes.Sort();
         }
     }
 
     //Determines/tests wherever an edge exists between two vertices
     bool Adjacent(int nodeAIndex, int nodeBIndex)
     {
-        int edgeIndex = m_TileNodes[nodeAIndex].adjagentNodes.BinarySearch(nodeBIndex);
+        int edgeIndex = m_TileNodes[nodeAIndex].adjacentNodes.BinarySearch(nodeBIndex);
 
         if (edgeIndex >= 0)
             return true;
