@@ -12,8 +12,10 @@ public class TileGraph
 {
     private class TileNode
     {
+
         public List<int> adjacentNodes;     // graph indices of adjacent nodes
         public int dataIndex;               // index for game data container
+
 
         TileNode()
         {
