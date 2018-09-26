@@ -28,7 +28,7 @@ public class TileGraph
     //Creates graph structure using information from source 
     void CreateGraph()
     {
-        
+        m_TileNodes = new List<TileNode>();
     }
 
     //Adds an edge between two vertices
