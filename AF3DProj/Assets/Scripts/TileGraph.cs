@@ -30,45 +30,45 @@ public class TileGraph
     }
 
     //Adds an edge between two vertices
-    void AddEdge(int tileAIndex, int tileBIndex)
+    void AddEdge(int nodeAIndex, int nodeBIndex)
     {
-        m_TileNodes[tileAIndex].adjagentNodes.Add(tileBIndex);
-        m_TileNodes[tileBIndex].adjagentNodes.Add(tileAIndex);
+        m_TileNodes[nodeAIndex].adjagentNodes.Add(nodeBIndex);
+        m_TileNodes[nodeBIndex].adjagentNodes.Add(nodeAIndex);
 
         // sort adjacent nodes so we can use binary search
-        if (m_TileNodes[tileAIndex].adjagentNodes.Count > 0)
-            m_TileNodes[tileAIndex].adjagentNodes.Sort();
+        if (m_TileNodes[nodeAIndex].adjagentNodes.Count > 0)
+            m_TileNodes[nodeAIndex].adjagentNodes.Sort();
 
-        if (m_TileNodes[tileBIndex].adjagentNodes.Count > 0)
-            m_TileNodes[tileBIndex].adjagentNodes.Sort();
+        if (m_TileNodes[nodeBIndex].adjagentNodes.Count > 0)
+            m_TileNodes[nodeBIndex].adjagentNodes.Sort();
     }
 
     // Removes an edge between two vertices
-    void RemoveEdge(int tileAIndex, int tileBIndex)
+    void RemoveEdge(int nodeAIndex, int nodeBIndex)
     {
         // search if edge exists
-        int edgeIndexA =  m_TileNodes[tileAIndex].adjagentNodes.BinarySearch(tileBIndex);
-        int edgeIndexB = m_TileNodes[tileBIndex].adjagentNodes.BinarySearch(tileAIndex);
+        int edgeIndexA =  m_TileNodes[nodeAIndex].adjagentNodes.BinarySearch(nodeBIndex);
+        int edgeIndexB = m_TileNodes[nodeBIndex].adjagentNodes.BinarySearch(nodeAIndex);
 
         // if it does, remove edge and resort
         if (edgeIndexA >= 0 && edgeIndexB >= 0)
         {
-            m_TileNodes[tileAIndex].adjagentNodes.RemoveAt(edgeIndexA);
-            m_TileNodes[tileBIndex].adjagentNodes.RemoveAt(edgeIndexB);
+            m_TileNodes[nodeAIndex].adjagentNodes.RemoveAt(edgeIndexA);
+            m_TileNodes[nodeBIndex].adjagentNodes.RemoveAt(edgeIndexB);
 
             // sort adjacent nodes so we can use binary search
-            if (m_TileNodes[tileAIndex].adjagentNodes.Count > 0)
-                m_TileNodes[tileAIndex].adjagentNodes.Sort();
+            if (m_TileNodes[nodeAIndex].adjagentNodes.Count > 0)
+                m_TileNodes[nodeAIndex].adjagentNodes.Sort();
 
-            if (m_TileNodes[tileBIndex].adjagentNodes.Count > 0)
-                m_TileNodes[tileBIndex].adjagentNodes.Sort();
+            if (m_TileNodes[nodeBIndex].adjagentNodes.Count > 0)
+                m_TileNodes[nodeBIndex].adjagentNodes.Sort();
         }
     }
 
     //Determines/tests wherever an edge exists between two vertices
-    bool Adjacent(int tileAIndex, int tileBIndex)
+    bool Adjacent(int nodeAIndex, int nodeBIndex)
     {
-        int edgeIndex = m_TileNodes[tileAIndex].adjagentNodes.BinarySearch(tileBIndex);
+        int edgeIndex = m_TileNodes[nodeAIndex].adjagentNodes.BinarySearch(nodeBIndex);
 
         if (edgeIndex >= 0)
             return true;
@@ -83,15 +83,21 @@ public class TileGraph
     }
 
     // Returns the value with a specified node
-    void GetNodeValue(float y)
+    int GetNodeValue(int nodeIndex)
     {
+        if (nodeIndex < 0 || nodeIndex >= m_TileNodes.Count)
+            throw new System.IndexOutOfRangeException();
 
+        return m_TileNodes[nodeIndex].dataIndex;
     }
 
     //Set value or data of a specified node
-    void SetNodeValue(int data, float x, float y)
+    void SetNodeValue(int nodeIndex, int value)
     {
+        if (nodeIndex < 0 || nodeIndex >= m_TileNodes.Count || value < 0)
+            throw new System.IndexOutOfRangeException();
 
+        m_TileNodes[nodeIndex].dataIndex = value;
     }
 
     //Not sure we need this but I'll keep it her in case we want it to have some debug function. It's meant to display the graph as a matrix
