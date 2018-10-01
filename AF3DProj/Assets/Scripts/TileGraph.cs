@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using JsonHelpers;
 
 /* 
  * Title: Tile Graph
@@ -12,12 +13,9 @@ public class TileGraph
 {
     private class TileNode
     {
-
         public List<int> adjacentNodes;     // graph indices of adjacent nodes
-        public int dataIndex;               // index for game data container
 
-
-        TileNode()
+        public TileNode()
         {
             adjacentNodes = new List<int>();
         }
@@ -25,10 +23,20 @@ public class TileGraph
 
     private List<TileNode> m_TileNodes;
 
-    //Creates graph structure using information from source 
-    void CreateGraph()
+    public TileGraph(List<TileDataWrapper> data)
     {
-        m_TileNodes = new List<TileNode>();
+        // create list equal to # of tiles
+        m_TileNodes = new List<TileNode>(data.Count);
+        
+        // store all adjacent nodes into graph
+        foreach (TileDataWrapper tile in data)
+        {
+            TileNode node = new TileNode();
+            node.adjacentNodes = tile.edges;
+
+            m_TileNodes[tile.ID] = node;
+
+        }
     }
 
     //Adds an edge between two vertices
@@ -68,7 +76,7 @@ public class TileGraph
     }
 
     //Determines/tests wherever an edge exists between two vertices
-    bool Adjacent(int nodeAIndex, int nodeBIndex)
+    bool AreNodesAdjacent(int nodeAIndex, int nodeBIndex)
     {
         int edgeIndex = m_TileNodes[nodeAIndex].adjacentNodes.BinarySearch(nodeBIndex);
 
@@ -79,27 +87,12 @@ public class TileGraph
     }
 
     //Lists all nodes y adjacent to a given node x if they exist
-    void Neighbour(float x)
-    {
-
-    }
-
-    // Returns the value with a specified node
-    int GetNodeValue(int nodeIndex)
+    List<int> GetNodeNeighbours(int nodeIndex)
     {
         if (nodeIndex < 0 || nodeIndex >= m_TileNodes.Count)
             throw new System.IndexOutOfRangeException();
 
-        return m_TileNodes[nodeIndex].dataIndex;
-    }
-
-    //Set value or data of a specified node
-    void SetNodeValue(int nodeIndex, int value)
-    {
-        if (nodeIndex < 0 || nodeIndex >= m_TileNodes.Count || value < 0)
-            throw new System.IndexOutOfRangeException();
-
-        m_TileNodes[nodeIndex].dataIndex = value;
+        return m_TileNodes[nodeIndex].adjacentNodes;
     }
 
     //Not sure we need this but I'll keep it her in case we want it to have some debug function. It's meant to display the graph as a matrix

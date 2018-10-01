@@ -11,23 +11,27 @@ using JsonHelpers;
 public class TileManager : MonoBehaviour
 {
     private TileGraph m_TileGraph;
+    private List<Tile> m_Tiles;
     private List<TileDataWrapper> m_TileData;
 
 	void Start()
     {
-        m_TileGraph = new TileGraph();
         m_TileData = new List<TileDataWrapper>();
 
         // get data from JSON file and input to graph to create it
         TextAsset jsonTextFile = Resources.Load<TextAsset>("jsonTileData");
         CreateTileDataFromJson(jsonTextFile.text);
 
-        // TODO: create tile graph from data
+        // create tile graph
+        m_TileGraph = new TileGraph(m_TileData);
+
         // TODO: create tile game objects from data
-	}
+    }
 
     void CreateTileDataFromJson(string data)
     {
         m_TileData = JsonHelper.ParseJsonToTileData(data);
     }
+
+    //TODO: create methods to access any tile data / functionality that is needed for game features
 }
