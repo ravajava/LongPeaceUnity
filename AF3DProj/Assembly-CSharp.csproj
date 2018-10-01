@@ -62,6 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Controls\GameObjectClick.cs" />
+    <Compile Include="Assets\Scripts\Battalion.cs" />
+    <Compile Include="Assets\Scripts\Brigade.cs" />
     <Compile Include="Assets\Scripts\Building.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\City.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileGraph.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
+    <Compile Include="Assets\Scripts\TopDownCamera.cs" />
     <None Include="Assets\Shaders\Outline.shader" />
     <None Include="Assets\Resources\jsonTileData.txt" />
     <Reference Include="Unity.VectorGraphics">
