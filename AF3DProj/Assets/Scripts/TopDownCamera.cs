@@ -40,7 +40,7 @@ public class TopDownCamera : MonoBehaviour
     {
         // check if mouse position is at edges of screen
         // bottom
-        if (Input.mousePosition.y <= MOUSE_LOOK_BUFFER)
+        if (Input.mousePosition.y <= MOUSE_LOOK_BUFFER || Input.GetButton("CameraDown"))
         {
             Vector3 oldPosition = transform.position;
             Vector3 newPosition = oldPosition - transform.up * CameraSpeed * Time.deltaTime;
@@ -54,7 +54,7 @@ public class TopDownCamera : MonoBehaviour
         }
 
         // top
-        if (Input.mousePosition.y >= (Screen.height - MOUSE_LOOK_BUFFER))
+        if (Input.mousePosition.y >= (Screen.height - MOUSE_LOOK_BUFFER) || Input.GetButton("CameraUp"))
         {
             Vector3 oldPosition = transform.position;
             Vector3 newPosition = oldPosition + transform.up * CameraSpeed * Time.deltaTime;
@@ -68,7 +68,7 @@ public class TopDownCamera : MonoBehaviour
         }
 
         // left
-        if (Input.mousePosition.x <= MOUSE_LOOK_BUFFER)
+        if (Input.mousePosition.x <= MOUSE_LOOK_BUFFER || Input.GetButton("CameraLeft"))
         {
             Vector3 oldPosition = transform.position;
             Vector3 newPosition = oldPosition - transform.right * CameraSpeed * Time.deltaTime;
@@ -82,7 +82,7 @@ public class TopDownCamera : MonoBehaviour
         }
 
         // right
-        if (Input.mousePosition.x >= (Screen.width - MOUSE_LOOK_BUFFER))
+        if (Input.mousePosition.x >= (Screen.width - MOUSE_LOOK_BUFFER) || Input.GetButton("CameraRight"))
         {
             Vector3 oldPosition = transform.position;
             Vector3 newPosition = oldPosition + transform.right * CameraSpeed * Time.deltaTime;
@@ -100,10 +100,30 @@ public class TopDownCamera : MonoBehaviour
     private void UpdateZoom()
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
-            transform.position += transform.forward * ZoomSpeed * Time.deltaTime;
+        {
+            Vector3 oldPosition = transform.position;
+            Vector3 newPosition = oldPosition + transform.forward * ZoomSpeed * Time.deltaTime;
+            float dist = m_ZoomDistance + Vector3.Distance(oldPosition, newPosition);
+
+            if (!CheckForZoomBounds(dist))
+            {
+                transform.position = newPosition;
+                m_ZoomDistance = dist;
+            }
+        }
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
-            transform.position -= transform.forward * ZoomSpeed * Time.deltaTime;
+        {
+            Vector3 oldPosition = transform.position;
+            Vector3 newPosition = oldPosition - transform.forward * ZoomSpeed * Time.deltaTime;
+            float dist = m_ZoomDistance - Vector3.Distance(oldPosition, newPosition);
+
+            if (!CheckForZoomBounds(dist))
+            {
+                transform.position = newPosition;
+                m_ZoomDistance = dist;
+            }
+        }
     }
 
     // check if camera has reached horizontal bounds
@@ -123,6 +143,17 @@ public class TopDownCamera : MonoBehaviour
         if (testDistance >= MOUSE_MAX_Y_DISTANCE)
             return true;
         else if (testDistance <= MOUSE_MIN_Y_DISTANCE)
+            return true;
+
+        return false;
+    }
+
+    // check if zoom has reached bounds
+    private bool CheckForZoomBounds(float testDistance)
+    {
+        if (testDistance >= ZOOM_IN_MAX_DISTANCE)
+            return true;
+        else if (testDistance <= ZOOM_OUT_MAX_DISTANCE)
             return true;
 
         return false;
