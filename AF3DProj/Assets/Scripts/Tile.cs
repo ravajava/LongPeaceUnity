@@ -9,6 +9,11 @@ public class Tile : MonoBehaviour {
     private int infastructureLevel;
     private City tileCity;
     public Vector2 tileCenter;
+
+    
+
+    public Color OnClickColour = new Color(153.0f, 204.0f, 255.0f);
+    public Color OffClickColour = new Color(37.0f, 53.0f, 45.0f);
     
     public string TileName
     {
@@ -48,7 +53,23 @@ public class Tile : MonoBehaviour {
             tileCity = value;
         }
     }
+    
+    public void OnMouseDown()
+    {
+        Debug.Log("Selected Tile was: " + gameObject.name);
+        gameObject.GetComponent<Renderer>().material.color = OnClickColour;
+        //calls the parents 'updateselectedchildren' function and includes the sender as part of the message
+        transform.parent.gameObject.SendMessage("UpdateSelectedChildren", gameObject);
+       
+    }
 
+    
+    public void OffClick()
+    {
+        gameObject.GetComponent<Renderer>().material.color = OffClickColour;
+        Debug.Log(gameObject.name + " was deselected.");
+    }
+    
     // Use this for initialization
     void Start () {
 		

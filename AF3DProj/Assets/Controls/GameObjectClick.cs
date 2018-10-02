@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GameObjectClick : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Color OnClickColour = new Color(153.0f, 204.0f, 255.0f);
+    public Color OffClickColour = new Color(37.0f, 53.0f, 45.0f);
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -17,5 +20,6 @@ public class GameObjectClick : MonoBehaviour {
     void OnMouseDown()
     {
         Debug.Log("Selected Tile was: " + gameObject.name);
+        gameObject.GetComponent<Renderer>().material.color = OnClickColour;
     }
 }
