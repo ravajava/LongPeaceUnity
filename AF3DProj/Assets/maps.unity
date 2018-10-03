@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7359393}
   - component: {fileID: 7359395}
   - component: {fileID: 7359394}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 19983470}
   - component: {fileID: 19983472}
   - component: {fileID: 19983471}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,8 @@ GameObject:
   - component: {fileID: 77528863}
   - component: {fileID: 77528862}
   - component: {fileID: 77528861}
-  m_Layer: 0
+  - component: {fileID: 77528864}
+  m_Layer: 5
   m_Name: OverviewButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,6 +585,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77528859}
   m_CullTransparentMesh: 0
+--- !u!225 &77528864
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77528859}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &80177356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1216,7 @@ GameObject:
   - component: {fileID: 159228608}
   - component: {fileID: 159228610}
   - component: {fileID: 159228609}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1723,7 @@ GameObject:
   - component: {fileID: 186934467}
   - component: {fileID: 186934469}
   - component: {fileID: 186934468}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2024,7 +2036,7 @@ GameObject:
   - component: {fileID: 206400259}
   - component: {fileID: 206400261}
   - component: {fileID: 206400260}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2102,7 +2114,8 @@ GameObject:
   - component: {fileID: 229691178}
   - component: {fileID: 229691177}
   - component: {fileID: 229691176}
-  m_Layer: 0
+  - component: {fileID: 229691179}
+  m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,6 +2232,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 229691174}
   m_CullTransparentMesh: 0
+--- !u!225 &229691179
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229691174}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &255139667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,7 +2617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 284609955}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiplomacyMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3730,7 +3754,7 @@ GameObject:
   - component: {fileID: 407320018}
   - component: {fileID: 407320020}
   - component: {fileID: 407320019}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3803,7 +3827,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418956017}
-  m_Layer: 0
+  - component: {fileID: 418956018}
+  m_Layer: 5
   m_Name: Menus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3833,6 +3858,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &418956018
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418956016}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &427891307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,7 +4369,7 @@ GameObject:
   - component: {fileID: 490182464}
   - component: {fileID: 490182463}
   - component: {fileID: 490182462}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4672,6 +4708,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -4752,6 +4789,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraSpeed: 10
   ZoomSpeed: 5
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e234070d6207cc248b4131dfc3fa22dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &553167902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4766,7 +4814,7 @@ GameObject:
   - component: {fileID: 553167906}
   - component: {fileID: 553167905}
   - component: {fileID: 553167904}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleButton (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 600985201}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675818594}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FactionMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5364,7 +5412,7 @@ GameObject:
   - component: {fileID: 695993233}
   - component: {fileID: 695993235}
   - component: {fileID: 695993234}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5433,7 +5481,8 @@ GameObject:
   - component: {fileID: 703303631}
   - component: {fileID: 703303633}
   - component: {fileID: 703303632}
-  m_Layer: 0
+  - component: {fileID: 703303634}
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5492,6 +5541,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703303630}
   m_CullTransparentMesh: 0
+--- !u!225 &703303634
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703303630}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &712201678
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,7 +5562,7 @@ GameObject:
   - component: {fileID: 712201679}
   - component: {fileID: 712201681}
   - component: {fileID: 712201680}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5819,7 +5879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761875803}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6219,7 +6279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837961752}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattlesMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6440,7 +6500,8 @@ GameObject:
   - component: {fileID: 884158656}
   - component: {fileID: 884158655}
   - component: {fileID: 884158654}
-  m_Layer: 0
+  - component: {fileID: 884158657}
+  m_Layer: 5
   m_Name: FactionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6541,6 +6602,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 884158652}
   m_CullTransparentMesh: 0
+--- !u!225 &884158657
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 884158652}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &896432943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,7 +6745,7 @@ GameObject:
   - component: {fileID: 899255998}
   - component: {fileID: 899256000}
   - component: {fileID: 899255999}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6752,7 +6824,7 @@ GameObject:
   - component: {fileID: 944773384}
   - component: {fileID: 944773383}
   - component: {fileID: 944773382}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleButton (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7043,7 +7115,7 @@ GameObject:
   - component: {fileID: 957373818}
   - component: {fileID: 957373817}
   - component: {fileID: 957373816}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleButton (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7208,7 +7280,7 @@ GameObject:
   - component: {fileID: 957766802}
   - component: {fileID: 957766804}
   - component: {fileID: 957766803}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7286,7 +7358,8 @@ GameObject:
   - component: {fileID: 974198459}
   - component: {fileID: 974198458}
   - component: {fileID: 974198457}
-  m_Layer: 0
+  - component: {fileID: 974198460}
+  m_Layer: 5
   m_Name: MapButtpn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7350,7 +7423,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 974198458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2146978222}
+        m_MethodName: MapButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &974198458
@@ -7387,6 +7471,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974198455}
   m_CullTransparentMesh: 0
+--- !u!225 &974198460
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974198455}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &984877592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7397,7 +7492,7 @@ GameObject:
   - component: {fileID: 984877593}
   - component: {fileID: 984877595}
   - component: {fileID: 984877594}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8082,7 +8177,7 @@ GameObject:
   - component: {fileID: 1061818480}
   - component: {fileID: 1061818482}
   - component: {fileID: 1061818481}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8160,7 +8255,7 @@ GameObject:
   - component: {fileID: 1069982760}
   - component: {fileID: 1069982759}
   - component: {fileID: 1069982758}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8276,7 +8371,7 @@ GameObject:
   - component: {fileID: 1143241858}
   - component: {fileID: 1143241860}
   - component: {fileID: 1143241859}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8350,7 +8445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1148576268}
   - component: {fileID: 1148576269}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8800,7 +8895,8 @@ GameObject:
   - component: {fileID: 1281316542}
   - component: {fileID: 1281316541}
   - component: {fileID: 1281316540}
-  m_Layer: 0
+  - component: {fileID: 1281316543}
+  m_Layer: 5
   m_Name: DiploButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8901,6 +8997,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281316538}
   m_CullTransparentMesh: 0
+--- !u!225 &1281316543
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281316538}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1315977690
 GameObject:
   m_ObjectHideFlags: 0
@@ -8911,7 +9018,7 @@ GameObject:
   - component: {fileID: 1315977691}
   - component: {fileID: 1315977693}
   - component: {fileID: 1315977692}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8986,7 +9093,7 @@ GameObject:
   - component: {fileID: 1318623353}
   - component: {fileID: 1318623355}
   - component: {fileID: 1318623354}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9059,7 +9166,7 @@ GameObject:
   - component: {fileID: 1368766062}
   - component: {fileID: 1368766061}
   - component: {fileID: 1368766060}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleButton (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9710,7 +9817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1440602814}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MapMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10024,7 +10131,7 @@ GameObject:
   - component: {fileID: 1514688831}
   - component: {fileID: 1514688830}
   - component: {fileID: 1514688829}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10907,7 +11014,7 @@ GameObject:
   - component: {fileID: 1613412218}
   - component: {fileID: 1613412217}
   - component: {fileID: 1613412216}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11376,7 +11483,7 @@ GameObject:
   - component: {fileID: 1642939418}
   - component: {fileID: 1642939417}
   - component: {fileID: 1642939416}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11465,7 +11572,8 @@ GameObject:
   - component: {fileID: 1676400252}
   - component: {fileID: 1676400251}
   - component: {fileID: 1676400250}
-  m_Layer: 0
+  - component: {fileID: 1676400253}
+  m_Layer: 5
   m_Name: BattlesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11529,7 +11637,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1676400251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2146978222}
+        m_MethodName: BattlesButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1676400251
@@ -11566,6 +11685,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1676400248}
   m_CullTransparentMesh: 0
+--- !u!225 &1676400253
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1676400248}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1676456233
 GameObject:
   m_ObjectHideFlags: 0
@@ -12184,7 +12314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752270668}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OverviewMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12220,7 +12350,7 @@ GameObject:
   - component: {fileID: 1786493213}
   - component: {fileID: 1786493212}
   - component: {fileID: 1786493211}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12302,7 +12432,7 @@ GameObject:
   - component: {fileID: 1792392620}
   - component: {fileID: 1792392622}
   - component: {fileID: 1792392621}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12503,7 +12633,7 @@ GameObject:
   - component: {fileID: 1820358614}
   - component: {fileID: 1820358613}
   - component: {fileID: 1820358612}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BattleButton (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13400,7 +13530,7 @@ GameObject:
   - component: {fileID: 1927543512}
   - component: {fileID: 1927543514}
   - component: {fileID: 1927543513}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15056,7 +15186,8 @@ GameObject:
   - component: {fileID: 2146978220}
   - component: {fileID: 2146978219}
   - component: {fileID: 2146978218}
-  m_Layer: 0
+  - component: {fileID: 2146978222}
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15146,3 +15277,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2146978222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146978217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e234070d6207cc248b4131dfc3fa22dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
