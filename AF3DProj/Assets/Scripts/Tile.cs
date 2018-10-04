@@ -58,6 +58,7 @@ public class Tile : MonoBehaviour {
     {
         Debug.Log("Selected Tile was: " + gameObject.name);
         gameObject.GetComponent<Renderer>().material.color = OnClickColour;
+        gameObject.layer = 9;
         //calls the parents 'updateselectedchildren' function and includes the sender as part of the message
         transform.parent.gameObject.SendMessage("UpdateSelectedChildren", gameObject);
        
@@ -67,6 +68,7 @@ public class Tile : MonoBehaviour {
     public void OffClick()
     {
         gameObject.GetComponent<Renderer>().material.color = OffClickColour;
+        gameObject.layer = 0;
         Debug.Log(gameObject.name + " was deselected.");
     }
     
