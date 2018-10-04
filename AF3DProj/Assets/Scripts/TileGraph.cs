@@ -5,8 +5,9 @@ using JsonHelpers;
 
 /* 
  * Title: Tile Graph
- * Author: Kristian Mckesey & Josue Lopes
+ * Author: Josue Lopes & Kristian Mckesey
  * Date: September 25th, 2018
+ * Description: TileGraph is used to ensure tiles know which tiles they are adjacent to.
 */
 
 public class TileGraph

@@ -80,8 +80,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Controls\GameObjectClick.cs" />
+    <Compile Include="Assets\Scripts\Battalion.cs" />
+    <Compile Include="Assets\Scripts\Brigade.cs" />
+    <Compile Include="Assets\Scripts\Building.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\City.cs" />
+    <Compile Include="Assets\Scripts\Faction.cs" />
+    <Compile Include="Assets\Scripts\Helpers\JsonHelper.cs" />
+    <Compile Include="Assets\Scripts\Map.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Tile.cs" />
+    <Compile Include="Assets\Scripts\TileGraph.cs" />
+    <Compile Include="Assets\Scripts\TileManager.cs" />
+    <Compile Include="Assets\Scripts\TopDownCamera.cs" />
+    <Compile Include="Assets\Scripts\UIBar.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\jsonTileData.txt" />
     <None Include="Assets\Shaders\Outline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

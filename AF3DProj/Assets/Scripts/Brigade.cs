@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+ * Title: Brigade
+ * Author: Kristian Mckesey & Josue Lopes
+ * Date: October 3rd, 2018
+ * Description: Brigades are, in a sense, a container of Battalions.
+ */
 public class Brigade : MonoBehaviour
 {
 

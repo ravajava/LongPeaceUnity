@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+ * Title: Battalion
+ * Author: Kristian Mckesey & Josue Lopes
+ * Date: October 3rd, 2018
+ * Description: Battalions are the building blocks for brigades
+ */
+
 public class Battalion : MonoBehaviour {
 
     public int battalionCost;
