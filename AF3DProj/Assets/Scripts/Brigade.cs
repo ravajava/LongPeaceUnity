@@ -8,6 +8,8 @@ using UnityEngine;
  * Date: October 3rd, 2018
  * Description: Brigades are, in a sense, a container of Battalions.
  */
+
+[System.Serializable]
 public class Brigade : MonoBehaviour
 {
 

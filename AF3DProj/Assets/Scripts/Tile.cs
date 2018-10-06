@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Tile : MonoBehaviour {
 
     public string tileName;
-    public List<Tile> NeighbourList;
+    //public List<Tile> NeighbourList;
     private int infastructureLevel;
     private City tileCity;
     public Vector2 tileCenter;

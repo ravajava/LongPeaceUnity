@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour {
+[System.Serializable]
+public class Building
+{
 
 	// Use this for initialization
 	void Start () {

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour {
+[System.Serializable]
+public class Character
+{
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +13,5 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 }

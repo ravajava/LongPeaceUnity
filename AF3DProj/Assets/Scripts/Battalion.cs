@@ -9,8 +9,9 @@ using UnityEngine;
  * Description: Battalions are the building blocks for brigades
  */
 
-public class Battalion : MonoBehaviour {
-
+[System.Serializable]
+public class Battalion
+{
     public int battalionCost;
     public int battalionLightAttack;
     public int battalionHeavyAttack;
@@ -20,11 +21,6 @@ public class Battalion : MonoBehaviour {
     public int battalionSupply;
     public int battalionSpeed;
     public int battalionAwareness;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 
     void GetBrigadeLightAttack()
     {
