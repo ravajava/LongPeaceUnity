@@ -17,6 +17,12 @@ public class Map : MonoBehaviour {
 		
 	}
 
+    //Subscribe to this event to be informed when a tile was clicked
+    public delegate void TileEvent(string GameObjectName);
+
+    public event TileEvent OnTileClick;
+
+
     void UpdateSelectedChildren(GameObject SendingChild)
     {
         if(ChildSendersList.Count > 0)
@@ -27,7 +33,14 @@ public class Map : MonoBehaviour {
             }
             ChildSendersList.Clear();
         }
-       
+
+
         ChildSendersList.Add(SendingChild);
+
+        if (OnTileClick != null)
+        {
+            //Event is fired here
+            OnTileClick(SendingChild.name);
+        }
     }
 }

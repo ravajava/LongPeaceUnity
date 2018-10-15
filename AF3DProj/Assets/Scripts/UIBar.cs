@@ -35,6 +35,9 @@ public class UIBar : MonoBehaviour {
 	void Update () {
 		
 	}
+    public delegate void MapButtonEvent();
+
+    public event MapButtonEvent OnMapButtonClick;
 
     //Basically checks if map is visble to be clicked on, if it isn't it will make that happen. Pretty much how all of these work.
     public void MapButtonClick ()

@@ -85,19 +85,25 @@
     <Compile Include="Assets\Scripts\Building.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\City.cs" />
+    <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\Faction.cs" />
+    <Compile Include="Assets\Scripts\Graphics\OutlineEffect.cs" />
     <Compile Include="Assets\Scripts\Helpers\JsonHelper.cs" />
+    <Compile Include="Assets\Scripts\InfoModal.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileGraph.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
     <Compile Include="Assets\Scripts\TopDownCamera.cs" />
+    <Compile Include="Assets\Scripts\TransformUI.cs" />
     <Compile Include="Assets\Scripts\UIBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\jsonTileData.txt" />
+    <None Include="Assets\Shaders\DrawWhite.shader" />
     <None Include="Assets\Shaders\Outline.shader" />
+    <None Include="Assets\Shaders\PP_Outline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -67,40 +67,43 @@
     <Compile Include="Assets\Scripts\Building.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\City.cs" />
+    <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\Faction.cs" />
     <Compile Include="Assets\Scripts\Graphics\OutlineEffect.cs" />
     <Compile Include="Assets\Scripts\Helpers\JsonHelper.cs" />
+    <Compile Include="Assets\Scripts\InfoModal.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\TileGraph.cs" />
     <Compile Include="Assets\Scripts\TileManager.cs" />
     <Compile Include="Assets\Scripts\TopDownCamera.cs" />
+    <Compile Include="Assets\Scripts\TransformUI.cs" />
     <Compile Include="Assets\Scripts\UIBar.cs" />
     <None Include="Assets\Shaders\DrawWhite.shader" />
     <None Include="Assets\Shaders\PP_Outline.shader" />
     <None Include="Assets\Shaders\Outline.shader" />
     <None Include="Assets\Resources\jsonTileData.txt" />
     <Reference Include="Unity.VectorGraphics">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.003">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VectorGraphics.Editor">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Documents/AF/LongPeaceUnity.git/trunk/AF3DProj/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Documents/AF/LongPeace/trunk/AF3DProj/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Programs/UnityVersions/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

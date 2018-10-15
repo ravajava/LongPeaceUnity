@@ -11,7 +11,7 @@ public class Tile : MonoBehaviour {
     private City tileCity;
     public Vector2 tileCenter;
 
-    
+    public UnityEngine.Events.UnityEvent TileClick;
 
     public Color OnClickColour = new Color(153.0f, 204.0f, 255.0f);
     public Color OffClickColour = new Color(37.0f, 53.0f, 45.0f);
@@ -54,6 +54,8 @@ public class Tile : MonoBehaviour {
             tileCity = value;
         }
     }
+
+  
     
     public void OnMouseDown()
     {
@@ -62,6 +64,7 @@ public class Tile : MonoBehaviour {
         gameObject.layer = 8;
         //calls the parents 'updateselectedchildren' function and includes the sender as part of the message
         transform.parent.gameObject.SendMessage("UpdateSelectedChildren", gameObject);
+
        
     }
 
