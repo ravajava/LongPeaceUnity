@@ -16,6 +16,7 @@ public class Brigade : MonoBehaviour
     public int BrigadeName;
     public List<Battalion> BrigadeBattalions;
     public Tile BrigadeLocation;
+    public int FactionID;
 
 
     // Use this for initialization
