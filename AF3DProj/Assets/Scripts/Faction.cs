@@ -11,9 +11,6 @@ public class Faction : MonoBehaviour {
     public float Fatigue;
     public int BattalionCap;
      
-
-
-
     // Use this for initialization
     void Start () {
 		

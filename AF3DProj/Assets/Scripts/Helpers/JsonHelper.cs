@@ -17,10 +17,16 @@ namespace JsonHelpers
             return tileWrapper.tiles;
         }
 
-        public static List<BattalionDataWrapper> ParseJsonToBrigadeData(string json)
+        public static List<BattalionDataWrapper> ParseJsonToBattalionData(string json)
         {
             BattalionListWrapper battalionWrapper = JsonUtility.FromJson<BattalionListWrapper>(json);
             return battalionWrapper.battalions;
+        }
+
+        public static List<BrigadeDataWrapper> ParseJsonToBrigadeData(string json)
+        {
+            BrigadeListWrapper brigadeWrapper = JsonUtility.FromJson<BrigadeListWrapper>(json);
+            return brigadeWrapper.brigades;
         }
     }
 
@@ -38,19 +44,19 @@ namespace JsonHelpers
         public List<int> edges;
     }
 
-    //[System.Serializable]
-    //public class BrigadeListWrapper
-    //{
-    //    public List<BrigadeDataWrapper> brigades;
-    //}
+    [System.Serializable]
+    public class BrigadeListWrapper
+    {
+        public List<BrigadeDataWrapper> brigades;
+    }
 
-    //[System.Serializable]
-    //public class BrigadeDataWrapper
-    //{
-    //    public int tileID;
-    //    public string name;
-    //    public List<BattalionDataWrapper> battalions;
-    //}
+    [System.Serializable]
+    public class BrigadeDataWrapper
+    {
+        public int tileID;
+        public string name;
+        public List<BattalionDataWrapper> battalions;
+    }
 
     [System.Serializable]
     public class BattalionListWrapper

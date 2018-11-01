@@ -22,6 +22,19 @@ public class Battalion
     public int battalionSpeed;
     public int battalionAwareness;
 
+    public Battalion(int cost, int lightAttack, int heavyAttack, int health, int armour, int supply, int speed, int awareness)
+    {
+        battalionCost = cost;
+        battalionLightAttack = lightAttack;
+        battalionHeavyAttack = heavyAttack;
+        battalionMaxHealth = health;
+        battalionCurrentHealth = health;
+        battalionArmour = armour;
+        battalionSupply = supply;
+        battalionSpeed = speed;
+        battalionAwareness = awareness;
+    }
+
     void GetBrigadeLightAttack()
     {
 

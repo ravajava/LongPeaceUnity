@@ -1,0 +1,10 @@
+{
+  "Nordvest": {
+    "FactionName": "Nordvest",
+    "FactionCharacters": "Kolar, Musil, Skola",
+    "FactionTiles": "1, 2, 3, 4, 5",
+    "Stability": 50,
+    "Fatigue": 50,
+    "BattalionCap": 25
+  }
+}

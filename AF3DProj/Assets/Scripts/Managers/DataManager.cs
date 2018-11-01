@@ -12,7 +12,8 @@ using UnityEngine;
 
 namespace DataManagement
 {
-    public class DataManager : MonoBehaviour
+    // TODO: make static
+    public class DataManager
     {
         public void SaveGame()
         {
