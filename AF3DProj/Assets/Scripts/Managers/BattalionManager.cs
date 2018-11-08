@@ -43,7 +43,7 @@ public class BattalionManager
         // loop through data wrapper and create proper list of battalions
         foreach (BattalionDataWrapper d in m_BattalionData)
         {
-            Battalion b = new Battalion(d.cost, d.lightAtk, d.heavyAtk, d.health, d.armour, d.supply, d.speed, d.awareness);
+            Battalion b = new Battalion(d.UnitName, d.Cost, d.LightAttack, d.HeavyAttack, d.Health, d.Armour, d.Supply, d.Speed, d.Awareness);
             m_Battalions.Add(b);
         }
     }

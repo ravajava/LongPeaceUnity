@@ -1,64 +1,76 @@
 {
-  "Sheet1": {
-    "PrGW": {
+  "battalions": [
+    {
+      "UnitEra": "PrGW",
       "UnitName": "Pre-Great War Infantry",
       "Cost": 1,
       "LightAttack": 15,
+      "HeavyAttack": 0,
       "Health": 250,
       "Armour": 0,
       "Supply": 2,
       "Speed": 1,
       "Awareness": 0
     },
-    "GW": {
+    {
+      "UnitEra": "GW",
       "UnitName": "Great War Infantry",
       "Cost": 2,
       "LightAttack": 30,
+      "HeavyAttack": 10,
       "Health": 300,
       "Armour": 0,
       "Supply": 2,
       "Speed": 1,
       "Awareness": 0
     },
-    "PstGW": {
+    {
+      "UnitEra": "PstGW",
       "UnitName": "Post Great War Infantry",
       "Cost": 3,
       "LightAttack": 40,
+      "HeavyAttack": 20,
       "Health": 400,
       "Armour": 0,
       "Supply": 4,
       "Speed": 1,
       "Awareness": 1
     },
-    "20era": {
+    {
+      "UnitEra": "20era",
       "UnitName": "Modern Infantry",
       "Cost": 5,
       "LightAttack": 50,
+      "HeavyAttack": 20,
       "Health": 500,
       "Armour": 10,
       "Supply": 4,
       "Speed": 1,
       "Awareness": 1
     },
-    "30era": {
+    {
+      "UnitEra": "30era",
       "UnitName": "Contemporary Infantry",
       "Cost": 7,
       "LightAttack": 65,
+      "HeavyAttack": 20,
       "Health": 650,
       "Armour": 10,
       "Supply": 4,
       "Speed": 1,
       "Awareness": 2
     },
-    "40era": {
+    {
+      "UnitEra": "40era",
       "UnitName": "Advanced Infantry",
       "Cost": 9,
       "LightAttack": 80,
+      "HeavyAttack": 40,
       "Health": 800,
       "Armour": 20,
       "Supply": 8,
       "Speed": 1,
       "Awareness": 2
     }
-  }
+  ]
 }

@@ -12,27 +12,29 @@ using UnityEngine;
 [System.Serializable]
 public class Battalion
 {
-    public int battalionCost;
-    public int battalionLightAttack;
-    public int battalionHeavyAttack;
-    public int battalionMaxHealth;
-    public int battalionCurrentHealth;
-    public int battalionArmour;
-    public int battalionSupply;
-    public int battalionSpeed;
-    public int battalionAwareness;
+    public string Name;
+    public int BattalionCost;
+    public int BattalionLightAttack;
+    public int BattalionHeavyAttack;
+    public int BattalionMaxHealth;
+    public int BattalionCurrentHealth;
+    public int BattalionArmour;
+    public int BattalionSupply;
+    public int BattalionSpeed;
+    public int BattalionAwareness;
 
-    public Battalion(int cost, int lightAttack, int heavyAttack, int health, int armour, int supply, int speed, int awareness)
+    public Battalion(string name, int cost, int lightAttack, int heavyAttack, int health, int armour, int supply, int speed, int awareness)
     {
-        battalionCost = cost;
-        battalionLightAttack = lightAttack;
-        battalionHeavyAttack = heavyAttack;
-        battalionMaxHealth = health;
-        battalionCurrentHealth = health;
-        battalionArmour = armour;
-        battalionSupply = supply;
-        battalionSpeed = speed;
-        battalionAwareness = awareness;
+        Name = name;
+        BattalionCost = cost;
+        BattalionLightAttack = lightAttack;
+        BattalionHeavyAttack = heavyAttack;
+        BattalionMaxHealth = health;
+        BattalionCurrentHealth = health;
+        BattalionArmour = armour;
+        BattalionSupply = supply;
+        BattalionSpeed = speed;
+        BattalionAwareness = awareness;
     }
 
     void GetBrigadeLightAttack()

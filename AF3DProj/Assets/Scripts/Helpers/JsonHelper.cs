@@ -67,13 +67,15 @@ namespace JsonHelpers
     [System.Serializable]
     public class BattalionDataWrapper
     {
-        public int cost;
-        public int lightAtk;
-        public int heavyAtk;
-        public int health;
-        public int armour;
-        public int supply;
-        public int speed;
-        public int awareness;
+        public string UnitEra;
+        public string UnitName;
+        public int Cost;
+        public int LightAttack;
+        public int HeavyAttack;
+        public int Health;
+        public int Armour;
+        public int Supply;
+        public int Speed;
+        public int Awareness;
     }
 }

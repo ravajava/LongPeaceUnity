@@ -27,7 +27,7 @@ public class TileGraph
     public TileGraph(List<TileDataWrapper> data)
     {
         // create list equal to # of tiles
-        m_TileNodes = new List<TileNode>(data.Count);
+        m_TileNodes = new List<TileNode>();
         
         // store all adjacent nodes into graph
         foreach (TileDataWrapper tile in data)
@@ -35,7 +35,7 @@ public class TileGraph
             TileNode node = new TileNode();
             node.adjacentNodes = tile.edges;
 
-            m_TileNodes[tile.ID] = node;
+            m_TileNodes.Add(node);
 
         }
     }

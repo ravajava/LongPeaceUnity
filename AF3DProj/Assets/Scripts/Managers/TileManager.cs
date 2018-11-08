@@ -26,6 +26,9 @@ public class TileManager : MonoBehaviour
         m_TileGraph = new TileGraph(m_TileData);
 
         // TODO: create tile game objects from data
+
+        // TEST
+       BattalionManager test = BattalionManager.Instance;
     }
 
     void CreateTileDataFromJson(string data)
