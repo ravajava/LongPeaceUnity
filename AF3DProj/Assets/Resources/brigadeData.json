@@ -1,10 +1,10 @@
 {
-  "Sheet1": {
-    "Nordvest": {
+  "brigades": [
+    {
       "FactionID": 1,
       "BrigadeName": "NordTest",
-      "BattalionList": "1, 1, 1, 1",
-      "BrigadeLocation": 2
+      "BrigadeLocation": 2,
+      "BattalionList": [1,1,1,1]
     }
-  }
+  ]
 }

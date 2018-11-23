@@ -9,21 +9,21 @@ using UnityEngine;
  * Description: Brigades are, in a sense, a container of Battalions.
  */
 
-[System.Serializable]
-public class Brigade : MonoBehaviour
+//[System.Serializable]
+public class Brigade
 {
+    private string m_BrigadeName;               
+    private int m_FactionID;
+    private int m_TileLocation;
+    private List<Battalion> m_BrigadeBattalions;
 
-    public int BrigadeName;
-    public List<Battalion> BrigadeBattalions;
-    public int FactionID;
-
-
-    // Use this for initialization
-    void Start()
+    public Brigade(int id, string name, int tileLocation, List<Battalion> battalions)
     {
+        m_FactionID = id;
+        m_BrigadeName = name;
+        m_TileLocation = tileLocation;
 
+        m_BrigadeBattalions = new List<Battalion>();
+        m_BrigadeBattalions = battalions;
     }
-
-    
-
 }

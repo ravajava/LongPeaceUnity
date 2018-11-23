@@ -53,9 +53,10 @@ namespace JsonHelpers
     [System.Serializable]
     public class BrigadeDataWrapper
     {
-        public int tileID;
-        public string name;
-        public List<BattalionDataWrapper> battalions;
+        public int FactionID;
+        public string BrigadeName;
+        public int BrigadeLocation;
+        public List<int> BattalionList;
     }
 
     [System.Serializable]

@@ -8,13 +8,16 @@ using JsonHelpers;
  * Date: September 26th, 2018
 */
 
-public class TileManager : MonoBehaviour
+public class TileManager
 {
+    // singleton
+    private static TileManager m_Instance = null;
+
     private TileGraph m_TileGraph;
     private List<Tile> m_Tiles;
     private List<TileDataWrapper> m_TileData;
 
-	void Start()
+	private TileManager()
     {
         m_TileData = new List<TileDataWrapper>();
 
@@ -25,13 +28,27 @@ public class TileManager : MonoBehaviour
         // create tile graph
         m_TileGraph = new TileGraph(m_TileData);
 
-        // TODO: create tile game objects from data
-
-        // TEST
-       BattalionManager test = BattalionManager.Instance;
+        // create tile game objects from data
+        //m_Tiles = new List<Tile>();
+        
+        //foreach (TileDataWrapper d in m_TileData)
+        //{
+        //    Tile tile = new Tile();
+        //}
     }
 
-    void CreateTileDataFromJson(string data)
+    public static TileManager Instance
+    {
+        get
+        {
+            if (m_Instance == null)
+                m_Instance = new TileManager();
+
+            return m_Instance;
+        }
+    }
+
+    private void CreateTileDataFromJson(string data)
     {
         m_TileData = JsonHelper.ParseJsonToTileData(data);
     }

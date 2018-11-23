@@ -70,9 +70,10 @@
     <Compile Include="Assets\Scripts\Faction.cs" />
     <Compile Include="Assets\Scripts\Graphics\OutlineEffect.cs" />
     <Compile Include="Assets\Scripts\Helpers\JsonHelper.cs" />
-    <Compile Include="Assets\Scripts\Managers\BattalionManager.cs" />
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TileManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\UnitManager.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
